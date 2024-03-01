@@ -1,0 +1,27 @@
+<!-- Edit Carousel Form -->
+<div class="container mt-4">
+    <h2>Edit Carousel</h2>
+    <form action="/editCarousel/<%= carousel._id %>" method="POST">
+        <div class="form-group">
+            <label for="url1">URL 1:</label>
+            <input type="text" class="form-control" id="url1" name="urls[0]" value="<%= carousel.urls[0] %>" required>
+        </div>
+        <div class="form-group">
+            <label for="url2">URL 2:</label>
+            <input type="text" class="form-control" id="url2" name="urls[1]" value="<%= carousel.urls[1] %>" required>
+        </div>
+        <div class="form-group">
+            <label for="url3">URL 3:</label>
+            <input type="text" class="form-control" id="url3" name="urls[2]" value="<%= carousel.urls[2] %>" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Carousel Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= carousel.name %>" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Carousel Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required><%= carousel.description %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
